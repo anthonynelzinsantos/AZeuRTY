@@ -1,11 +1,11 @@
-// QWeuRTY base layout
+// AZeuRTY base layout
 {
 	"fullName": "AZeuRTY",
 	"name": "azeurty",
 	"company": "Anthony Nelzin-Santos",
 	"copyright": "EUPL v1.2",
-	"localeId": "00000409",
-	"description": "Le clavier pour les Français qui n’écrivent pas que français.",
+	"localeId": "0001040c",
+	"description": "Le clavier français pour les Français qui n’écrivent pas que français.",
 	"version": "1.0",
 	"shiftlevels": [ "None", "Shift", "AltGr", "Shift+AltGr" ],
 	"keys": [
