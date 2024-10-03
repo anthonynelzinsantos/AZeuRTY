@@ -10,24 +10,24 @@
 	"shiftlevels": [ "None", "Shift", "AltGr", "Shift+AltGr" ],
 	"keys": [
 		//  Number row
-		{ "pos": "~", "letters": [ "@", "#", "*", "№" ] },
-		{ "pos": "1", "letters": [ "&", "1", "«", "⁊" ] },
-		{ "pos": "2", "letters": [ "é", "2", "»", "É" ] },
-		{ "pos": "3", "letters": [ "“", "3", "”", "\"" ] },
-		{ "pos": "4", "letters": [ "’", "4", "’", "'" ] },
-		{ "pos": "5", "letters": [ "(", "5", "{", "[" ] },
+		{ "pos": "~", "letters": [ "@", "#", "cdk:tilde", "№" ] },
+		{ "pos": "1", "letters": [ "&", "1", "cdk:caron", "€" ] },
+		{ "pos": "2", "letters": [ "é", "2", "cdk:acute", "É" ] },
+		{ "pos": "3", "letters": [ "\"", "3", "“", "”" ] },
+		{ "pos": "4", "letters": [ "'", "4", "‘", "’" ] },
+		{ "pos": "5", "letters": [ "(", "5", "[", "{" ] },
 		{ "pos": "6", "letters": [ "-", "6", "–", "—" ] },
-		{ "pos": "7", "letters": [ "è", "7", "cdk:macron", "È" ] },
-		{ "pos": "8", "letters": [ "_", "8", "′", "″" ] },
+		{ "pos": "7", "letters": [ "è", "7", "cdk:grave", "È" ] },
+		{ "pos": "8", "letters": [ "_", "8", "cdk:macron", "∞" ] },
 		{ "pos": "9", "letters": [ "ç", "9", "cdk:cedilla", "Ç" ] },
 		{ "pos": "0", "letters": [ "à", "0", "cdk:dot", "À" ] },
-		{ "pos": "-", "letters": [ ")", "°", "}", "]" ] },
+		{ "pos": "-", "letters": [ ")", "°", "]", "}" ] },
 		{ "pos": "+", "letters": [ "=", "+", "≠", "±" ] },
 		
 		//  Top row
 		{ "pos": "Q", "letters": [ "a", "A", "å", "Å" ] },
 		{ "pos": "W", "letters": [ "z", "Z", "ʒ", "Ʒ" ] },
-		{ "pos": "E", "letters": [ "e", "E", "€", "cdk:money" ] },
+		{ "pos": "E", "letters": [ "e", "E", "ə", "Ə" ] },
 		{ "pos": "R", "letters": [ "r", "R", "ª", "º" ] },
 		{ "pos": "T", "letters": [ "t", "T", "þ", "Þ" ] },
 		{ "pos": "Y", "letters": [ "y", "Y", "ȝ", "Ȝ" ] },
@@ -36,8 +36,8 @@
 		{ "pos": "O", "letters": [ "o", "O", "ø", "Ø" ] },
 		{ "pos": "P", "letters": [ "p", "P", "œ", "Œ" ] },
 		{ "pos": "[", "letters": [ "cdk:circum", "cdk:dresis", "^", "¨" ] },
-		{ "pos": "]", "letters": [ "cdk:grave", "cdk:tilde", "`", "~" ] },
-		{ "pos": "\\", "letters": [ "cdk:acute", "cdk:caron", "´", "ˇ" ] },
+		{ "pos": "]", "letters": [ "$", "*", "cdk:money", "£" ] },
+		{ "pos": "\\", "letters": [ "`", "~", "²", "½" ] },
 		
 		//  Middle row
 		{ "pos": "A", "letters": [ "q", "Q", "æ", "Æ" ] },
@@ -53,12 +53,12 @@
 		{ "pos": "'", "letters": [ "ù", "%", "‰", "Ù" ] },
 		
 		//  Bottom row
-		{ "pos": "Iso", "letters": [ "<", ">", "≤", "≥" ] },
+		{ "pos": "Iso", "letters": [ "<", ">", "«", "»" ] },
 		{ "pos": "Z", "letters": [ "w", "W", "ƿ", "Ƿ" ] },
 		{ "pos": "X", "letters": [ "x", "X", "×", "⨯" ] },
 		{ "pos": "C", "letters": [ "c", "C", "ç", "Ç" ] },
 		{ "pos": "V", "letters": [ "v", "V", "√", "∛" ] },
-		{ "pos": "B", "letters": [ "b", "B", "ə", "Ə" ] },
+		{ "pos": "B", "letters": [ "b", "B", "†", "‡" ] },
 		{ "pos": "N", "letters": [ "n", "N", "ñ", "Ñ" ] },
 		{ "pos": "M", "letters": [ ",", "?", "‑", "¿" ] },
 		{ "pos": ",", "letters": [ ";", ".", "…", "·" ] },
@@ -72,7 +72,7 @@
 		{
 			// Acute and double acute
 			"name": "acute",
-			"baseChar": "'",
+			"baseChar": "’",
 			"stringMap": [
 				[ "è", "ű" ],
 				[ "ç", "ő" ],
@@ -120,12 +120,12 @@
 		{
 			// Caron
 			"name": "caron",
-			"baseChar": "\\",
+			"baseChar": "ˇ",
 			"stringMap": [
 				[ "&", "₁" ],
 				[ "é", "₂" ],
-				[ "“", "₃" ],
-				[ "’", "₄" ],
+				[ "\"", "₃" ],
+				[ "'", "₄" ],
 				[ "(", "₅" ],
 				[ "-", "₆" ],
 				[ "è", "₇" ],
@@ -172,7 +172,7 @@
 		{
 			// Cedilla, subscript comma and ogonek
 			"name": "cedilla",
-			"baseChar": "ç",
+			"baseChar": "¸",
 			"stringMap": [
 				[ "&", "ą" ],
 				[ "“", "ę" ],
@@ -220,8 +220,8 @@
 			"stringMap": [
 				[ "&", "¹" ],
 				[ "é", "²" ],
-				[ "“", "³" ],
-				[ "’", "⁴" ],
+				[ "\"", "³" ],
+				[ "'", "⁴" ],
 				[ "(", "⁵" ],
 				[ "-", "⁶" ],
 				[ "è", "⁷" ],
@@ -261,7 +261,7 @@
 		{
 			// Dot above
 			"name": "dot",
-			"baseChar": "à",
+			"baseChar": "·",
 			"stringMap": [
 				[ "a", "ȧ" ],
 				[ "z", "ż" ],
@@ -396,7 +396,7 @@
 		{
 			// Macron and assorted strokes
 			"name": "macron",
-			"baseChar": "è",
+			"baseChar": "¯",
 			"stringMap": [
 				[ "a", "ā" ],
 				[ "z", "ƶ" ],
